@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Todo Angular Firebase</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootlint/1.1.0/bootlint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <!--script src="https://code.jquery.com/jquery-3.6.0.min.js"></script-->
+    <script src="todos.js"></script>
+</head>
+
+
+<body>
+<div  class="container m-5 p-2 rounded mx-auto bg-light shadow">
+    <!-- App title section -->
+    <div class="row m-1 p-4">
+        <div class="col">
+            <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+                <i class="fa fa-check bg-primary text-white rounded p-2"></i>
+                <u>My Todo-s</u>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Create todo section -->
+    <div class="row m-1 p-3">
+        <div class="col col-11 mx-auto">
+            <div class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+                <div class="col">
+                    <input class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new ..">
+                </div>
+                <div class="col-auto m-0 px-2 d-flex align-items-center">
+                    <label class="text-secondary my-2 p-0 px-1 view-opt-label due-date-label d-none"></label>
+                    <i class="fa fa-calendar my-2 px-1 text-primary btn due-date-button" data-toggle="tooltip" data-placement="bottom" title="Set a Due date"></i>
+                    <i class="fa fa-calendar-times-o my-2 px-1 text-danger btn clear-due-date-button d-none" data-toggle="tooltip" data-placement="bottom" title="Clear Due date"></i>
+                </div>
+                <div class="col-auto px-0 mx-0 mr-2">
+                    <button type="button" class="btn btn-primary" disabled="disabled">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2 mx-4 border-black-25 border-bottom"></div>
+    <!-- View options section -->
+    <div class="row m-1 p-3 px-5 justify-content-end">
+        <div class="col-auto d-flex align-items-center">
+            <label class="text-secondary my-2 pr-2 view-opt-label">Filter</label>
+            <select class="custom-select custom-select-sm btn my-2">
+                <option value="ALL" selected>All</option>
+                <option value="COMPLETED">Completed</option>
+                <option value="ACTIVE">Active</option>
+                <option value="HAS_DUE_DATE">Has due date</option>
+            </select>
+        </div>
+        <!--div class="col-auto d-flex align-items-center px-1 pr-3">
+            <label class="text-secondary my-2 pr-2 view-opt-label">Sort</label>
+            <select class="custom-select custom-select-sm btn my-2">
+                <option value="added-date-asc" selected>Added date</option>
+                <option value="due-date-desc">Due date</option>
+            </select>
+            <i class="fa fa fa-sort-amount-asc text-info btn mx-0 px-0 pl-1" data-toggle="tooltip" data-placement="bottom" title="Ascending"></i>
+            <i class="fa fa fa-sort-amount-desc text-info btn mx-0 px-0 pl-1 d-none" data-toggle="tooltip" data-placement="bottom" title="Descending"></i>
+        </div-->
+    </div>
+
+    <!-- Todo list section -->
+    <div class="row mx-1 px-5 pb-3 w-80">
+        <div id="todos-container" class="col mx-auto">
+        </div>
+    </div>
+</div>
+</body>
+</html>
